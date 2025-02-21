@@ -114,7 +114,20 @@ function carregarGrafico(tipo) {
         <p><strong>Indicado para:</strong> ${graficos[tipo].indicado}</p>
         <p><strong>Não indicado para:</strong> ${graficos[tipo].naoIndicado}</p>
     `;
+
+       // Fechar o menu no mobile ao selecionar um gráfico
+       document.getElementById("sidebar").classList.remove("active");
 }
+// Evento para abrir e fechar o menu no mobile
+document.addEventListener("DOMContentLoaded", () => {
+    const menuToggle = document.getElementById("menu-toggle");
+    const sidebar = document.getElementById("sidebar");
+
+    menuToggle.addEventListener("click", () => {
+        sidebar.classList.toggle("active");
+    });
+});
+
 
 // Adiciona evento para garantir que os módulos e gráficos carreguem ao clicar no menu
 document.addEventListener("DOMContentLoaded", () => {

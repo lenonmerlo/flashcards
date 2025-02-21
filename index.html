@@ -10,24 +10,30 @@
 
 <body>
 
-    <aside>
+    <!-- Botão do menu hambúrguer -->
+    <button id="menu-toggle" class="menu-toggle">☰</button>
+
+    <!-- Overlay para escurecer fundo no mobile -->
+    <div id="menu-overlay" class="menu-overlay"></div>
+
+    <!-- Menu lateral -->
+    <aside id="sidebar">
         <nav>
             <ul>
-                <li onclick="carregarModulo(1)">Introdução à Visualização de Dados</li>
-                <li onclick="carregarModulo(2)">Métricas e Abordagens</li>
-                <li onclick="carregarModulo(3)">Pré-processamento e Qualidade</li>
-                <li onclick="carregarModulo(4)">PRÁTICA PYTHON</li>
-                <li onclick="carregarModulo(5)">Efeitos Visuais</li>
+                <li data-modulo="1">Introdução à Visualização de Dados</li>
+                <li data-modulo="2">Métricas e Abordagens</li>
+                <li data-modulo="3">Pré-processamento e Qualidade</li>
+                <li data-modulo="4">PRÁTICA PYTHON</li>
+                <li data-modulo="5">Efeitos Visuais</li>
                 <hr>
-                <li data-grafico="pizza" onclick="carregarGrafico('pizza')">Gráfico de Pizza</li>
-                <li data-grafico="barras" onclick="carregarGrafico('barras')">Gráfico de Barras</li>
-                <li data-grafico="linhas" onclick="carregarGrafico('linhas')">Gráfico de Linhas</li>
-                <li data-grafico="dispersao" onclick="carregarGrafico('dispersao')">Gráfico de Dispersão</li>
-                <li data-grafico="heatmap" onclick="carregarGrafico('heatmap')">Heatmap</li>
+                <li data-grafico="pizza">Gráfico de Pizza</li>
+                <li data-grafico="barras">Gráfico de Barras</li>
+                <li data-grafico="linhas">Gráfico de Linhas</li>
+                <li data-grafico="dispersao">Gráfico de Dispersão</li>
+                <li data-grafico="heatmap">Heatmap</li>
             </ul>
         </nav>
     </aside>
-    
 
     <main>
         <h1>Flashcards de Visualização de Dados</h1>
@@ -37,7 +43,6 @@
     </main>
 
     <script type="module" src="script.js"></script>
-
 
 </body>
 
