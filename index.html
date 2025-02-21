@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flashcards de Visualização de Dados</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+
+    <aside>
+        <nav>
+            <ul>
+                <li onclick="carregarModulo(1)">Introdução à Visualização de Dados</li>
+                <li onclick="carregarModulo(2)">Métricas e Abordagens</li>
+                <li onclick="carregarModulo(3)">Pré-processamento e Qualidade</li>
+                <li onclick="carregarModulo(4)">PRÁTICA PYTHON</li>
+                <li onclick="carregarModulo(5)">Efeitos Visuais</li>
+                <hr>
+                <li data-grafico="pizza" onclick="carregarGrafico('pizza')">Gráfico de Pizza</li>
+                <li data-grafico="barras" onclick="carregarGrafico('barras')">Gráfico de Barras</li>
+                <li data-grafico="linhas" onclick="carregarGrafico('linhas')">Gráfico de Linhas</li>
+                <li data-grafico="dispersao" onclick="carregarGrafico('dispersao')">Gráfico de Dispersão</li>
+                <li data-grafico="heatmap" onclick="carregarGrafico('heatmap')">Heatmap</li>
+            </ul>
+        </nav>
+    </aside>
+    
+
+    <main>
+        <h1>Flashcards de Visualização de Dados</h1>
+        <h2 id="titulo-modulo">Selecione um módulo</h2>
+        <div class="container" id="flashcards-container"></div>
+        <div id="grafico-container"></div>
+    </main>
+
+    <script type="module" src="script.js"></script>
+
+
+</body>
+
+</html>
